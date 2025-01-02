@@ -1,6 +1,11 @@
 package Sathwik.tasks.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "Task")
 data class Task(
-    val id: String,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
     var name: String,
 )
